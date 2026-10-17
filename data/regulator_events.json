@@ -1,0 +1,317 @@
+[
+  {
+    "event_id": "REG-0001",
+    "well_id": "WELL-0023",
+    "date": "2024-05-02",
+    "event_type": "Violation Notice & Fine",
+    "fine_usd": 25000,
+    "details": "Civil Citation C-2024-88: Failure to provide mandatory 24-hour statutory notification for 8.5 bbl crude release on 2024-04-15 (reported on day 4).",
+    "citation_ref": "EPA Region 6 / Rule 112.4"
+  },
+  {
+    "event_id": "REG-0002",
+    "well_id": "WELL-0104",
+    "date": "2023-09-19",
+    "event_type": "Compliant Spill Notification",
+    "fine_usd": 0,
+    "details": "Spill incident report submitted at 14:20 (5 hours after drone discovery). Remedial boom deployed. Audit confirmed timely compliance.",
+    "citation_ref": "State Energy Commission Notice 2023-401"
+  },
+  {
+    "event_id": "REG-0003",
+    "well_id": "WELL-0045",
+    "date": "2024-06-15",
+    "event_type": "Site Inspection Closed",
+    "fine_usd": 0,
+    "details": "State inspector visited site following initial drone report. Verified field correction: ponding was non-hydrocarbon rainwater runoff. Incident record closed with zero citation.",
+    "citation_ref": "Site Inspection Report SR-2024-912"
+  },
+  {
+    "event_id": "REG-0004",
+    "well_id": "WELL-0012",
+    "date": "2024-07-10",
+    "event_type": "Workover Permit Approval",
+    "fine_usd": 0,
+    "details": "Subsurface workover permit approved for ESP motor retrieval and electrical diagnostics.",
+    "citation_ref": "Permit WO-2024-118"
+  },
+  {
+    "event_id": "REG-0005",
+    "well_id": "WELL-0068",
+    "date": "2023-04-07",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0068. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0006",
+    "well_id": "WELL-0165",
+    "date": "2024-05-18",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0165. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0007",
+    "well_id": "WELL-0033",
+    "date": "2024-06-30",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0033. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0008",
+    "well_id": "WELL-0054",
+    "date": "2022-01-08",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0054. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0009",
+    "well_id": "WELL-0077",
+    "date": "2024-11-16",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0077. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0010",
+    "well_id": "WELL-0170",
+    "date": "2023-02-25",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0170. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0011",
+    "well_id": "WELL-0009",
+    "date": "2023-12-16",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0009. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0012",
+    "well_id": "WELL-0183",
+    "date": "2021-04-12",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0183. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0013",
+    "well_id": "WELL-0014",
+    "date": "2022-02-23",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0014. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0014",
+    "well_id": "WELL-0197",
+    "date": "2023-04-02",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0197. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0015",
+    "well_id": "WELL-0004",
+    "date": "2023-04-28",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0004. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0016",
+    "well_id": "WELL-0046",
+    "date": "2021-07-25",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0046. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0017",
+    "well_id": "WELL-0104",
+    "date": "2024-04-23",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0104. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0018",
+    "well_id": "WELL-0065",
+    "date": "2023-10-01",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0065. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0019",
+    "well_id": "WELL-0084",
+    "date": "2022-11-21",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0084. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0020",
+    "well_id": "WELL-0063",
+    "date": "2024-06-13",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0063. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0021",
+    "well_id": "WELL-0198",
+    "date": "2022-06-13",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0198. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0022",
+    "well_id": "WELL-0150",
+    "date": "2022-10-29",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0150. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0023",
+    "well_id": "WELL-0093",
+    "date": "2022-08-04",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0093. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0024",
+    "well_id": "WELL-0167",
+    "date": "2024-01-07",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0167. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0025",
+    "well_id": "WELL-0199",
+    "date": "2021-03-13",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0199. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0026",
+    "well_id": "WELL-0116",
+    "date": "2024-05-18",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0116. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0027",
+    "well_id": "WELL-0099",
+    "date": "2022-11-16",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0099. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0028",
+    "well_id": "WELL-0074",
+    "date": "2024-06-14",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0074. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0029",
+    "well_id": "WELL-0131",
+    "date": "2022-11-22",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0131. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0030",
+    "well_id": "WELL-0190",
+    "date": "2021-12-28",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0190. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0031",
+    "well_id": "WELL-0044",
+    "date": "2024-06-20",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0044. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0032",
+    "well_id": "WELL-0013",
+    "date": "2021-11-26",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0013. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0033",
+    "well_id": "WELL-0142",
+    "date": "2023-09-04",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0142. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0034",
+    "well_id": "WELL-0148",
+    "date": "2021-06-01",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0148. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  },
+  {
+    "event_id": "REG-0035",
+    "well_id": "WELL-0141",
+    "date": "2022-12-31",
+    "event_type": "Routine Environmental Audit",
+    "fine_usd": 0,
+    "details": "Standard quadrennial environmental compliance walk-through at WELL-0141. No uncontained hydrocarbons observed.",
+    "citation_ref": "Regional Field Audit Routine Log"
+  }
+]

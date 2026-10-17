@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asset Intelligence Copilot | Oil Field Operations</title>
+  <meta name="description" content="Agentic AI Copilot answering plain-English operator queries with grounded evidence, multi-tier memory, and inline generative UI.">
+  
+  <!-- Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Chart.js for Generative Charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Leaflet for Interactive Wellhead Maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Custom Design System -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- Top Header -->
+    <header class="top-nav">
+      <div class="nav-brand">
+        <div class="brand-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+          <span class="status-pulse"></span>
+        </div>
+        <div class="brand-text">
+          <h1>Asset Intelligence Copilot</h1>
+          <span class="brand-tag">Permian Basin · 200 Wells · 41k Inspections</span>
+        </div>
+      </div>
+
+      <!-- Navigation Views -->
+      <nav class="nav-tabs">
+        <button id="tab-chat" class="tab-btn active" onclick="switchView('chat')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Chat Copilot
+        </button>
+        <button id="tab-benchmark" class="tab-btn" onclick="switchView('benchmark')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          18 Evaluation Qs
+        </button>
+        <button id="tab-overrides" class="tab-btn" onclick="switchView('overrides')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Memory & Overrides
+        </button>
+      </nav>
+
+      <!-- User Switcher (Two-Tier Private Memory) -->
+      <div class="user-switcher-container">
+        <div class="user-avatar-badge" id="currentUserAvatar">AC</div>
+        <div class="user-select-wrap">
+          <label for="userSelect">Operator Persona:</label>
+          <select id="userSelect" onchange="onUserChange()">
+            <option value="user_alice">Alice Chen (Field Lead - West Valley)</option>
+            <option value="user_bob">Bob Martinez (Operator & Drone Pilot)</option>
+            <option value="user_carol">Carol Danvers (Compliance Officer)</option>
+            <option value="user_david">David Kim (Chief Production Eng)</option>
+            <option value="user_frank">Frank Miller (Maintenance Lead)</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- VIEW 1: Chat Copilot -->
+      <section id="view-chat" class="view-panel active">
+        
+        <!-- Suggested Questions Bar -->
+        <div class="quick-prompts-bar">
+          <span class="prompt-hint">Try Asking:</span>
+          <button class="quick-chip" onclick="askQuickPrompt('Which wells in North Field were down the longest this summer, and why?')">
+            ⏳ Summer Downtime Ranking
+          </button>
+          <button class="quick-chip" onclick="askQuickPrompt('Is WELL-0007 currently producing oil or is it shut in? Show me its temperature trends.')">
+            📈 WELL-0007 Trend
+          </button>
+          <button class="quick-chip" onclick="askQuickPrompt('Did we have any reportable spills over 5 barrels this year, and were any reported late to the regulator?')">
+            🛢️ Spill Violations & 5 bbl Rule
+          </button>
+          <button class="quick-chip" onclick="askQuickPrompt('Compare total downtime across all four areas by month for 2024 as a heatmap.')">
+            🔥 Area × Month Heatmap
+          </button>
+          <button class="quick-chip" onclick="askQuickPrompt('Show the geographical distribution of all wells in South Basin as a map.')">
+            🗺️ South Basin Map
+          </button>
+          <button class="quick-chip" onclick="askQuickPrompt('Is there any contradiction or conflict regarding WELL-0088\'s status in August 2024?')">
+            ⚠️ WELL-0088 Conflict Check
+          </button>
+          <button class="quick-chip" onclick="askQuickPrompt('Recall the wells we discussed earlier in our conversation.')">
+            🧠 Recall My Discussed Wells
+          </button>
+        </div>
+
+        <!-- Chat Conversation Stream -->
+        <div class="chat-stream" id="chatStream">
+          
+          <!-- Welcome Message -->
+          <div class="chat-message assistant-message">
+            <div class="message-header">
+              <div class="agent-badge">
+                <span class="ai-dot"></span> Asset Intelligence Copilot
+              </div>
+              <span class="timestamp">Just now</span>
+            </div>
+            <div class="message-body">
+              <p>Welcome! I am your <strong>Asset Intelligence Copilot</strong> for the Permian Basin field. I synthesize data across <strong>200 wells, ~41,000 weekly thermal inspections, maintenance work orders, regulatory compliance filings, and field SOP manuals</strong>.</p>
+              <p>Every response is <strong>strictly grounded with citations</strong>, applies <strong>7-day discrete downtime accounting</strong> based on well-type $\Delta T$ rules, tracks <strong>shared & private memory</strong>, and generates inline visual analytics.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Input Bar with Generative UI Preference -->
+        <div class="chat-input-wrapper">
+          <div class="visual-picker-bar">
+            <span class="picker-label">Generative UI Mode:</span>
+            <div class="visual-toggle-group">
+              <button class="visual-opt active" data-visual="" onclick="setVisualPreference(this, null)">Auto-Select</button>
+              <button class="visual-opt" data-visual="status_card" onclick="setVisualPreference(this, 'status_card')">Status Card</button>
+              <button class="visual-opt" data-visual="table" onclick="setVisualPreference(this, 'table')">Table</button>
+              <button class="visual-opt" data-visual="line_chart" onclick="setVisualPreference(this, 'line_chart')">Line Chart</button>
+              <button class="visual-opt" data-visual="bar_chart" onclick="setVisualPreference(this, 'bar_chart')">Bar Chart</button>
+              <button class="visual-opt" data-visual="map" onclick="setVisualPreference(this, 'map')">Map</button>
+              <button class="visual-opt" data-visual="heatmap" onclick="setVisualPreference(this, 'heatmap')">Heatmap</button>
+            </div>
+            <button class="btn-correction" onclick="openCorrectionModal()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              Submit Data Correction
+            </button>
+          </div>
+
+          <form id="chatForm" onsubmit="handleChatSubmit(event)">
+            <div class="input-box">
+              <textarea 
+                id="queryInput" 
+                rows="1" 
+                placeholder="Ask anything about wells, downtime, spills, SOPs, or maintenance (e.g. 'Which wells in North Field were down longest this summer?')" 
+                onkeydown="handleKeyDown(event)"
+              ></textarea>
+              <button type="submit" id="sendBtn" class="send-btn" title="Send Question">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </section>
+
+      <!-- VIEW 2: 18 Evaluation Benchmarks -->
+      <section id="view-benchmark" class="view-panel">
+        <div class="benchmark-header">
+          <div>
+            <h2>Hackathon Benchmark Suite (18 Example Questions)</h2>
+            <p>Every sample question evaluated for correct domain logic, citations, memory isolation, and inline generative UI visual selection.</p>
+          </div>
+          <button class="btn-primary" onclick="runAllBenchmarks()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Run All 18 Tests
+          </button>
+        </div>
+
+        <div class="benchmark-progress" id="benchmarkProgress" style="display: none;">
+          <div class="progress-bar-fill" id="progressBarFill" style="width: 0%;"></div>
+        </div>
+
+        <div class="questions-grid" id="questionsGrid">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+      <!-- VIEW 3: Shared Memory & Overrides Ledger -->
+      <section id="view-overrides" class="view-panel">
+        <div class="overrides-header">
+          <div>
+            <h2>Two-Tier Memory & Ground-Truth Overrides Ledger</h2>
+            <p>Shared knowledge across operators, active private user session tracking, and scoped corrections ("Correction Wins Rule").</p>
+          </div>
+          <button class="btn-primary" onclick="openCorrectionModal()">
+            + Log New Field Correction
+          </button>
+        </div>
+
+        <div class="memory-grid">
+          <div class="memory-card">
+            <h3>🌐 Active Data Overrides & Corrections</h3>
+            <p class="section-desc">Corrections dynamically supersede raw drone/sensor data and apply at single-well or well-type scope.</p>
+            <div id="overridesList" class="ledger-list">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+
+          <div class="memory-card">
+            <h3>🔒 Current User Private Session Memory</h3>
+            <div class="user-session-badge">Active User: <span id="sessionUserLabel">Alice Chen (user_alice)</span></div>
+            <p class="section-desc">Wells referenced in this session are remembered exclusively for this user profile.</p>
+            <div id="privateSessionWells" class="session-wells-box">
+              <!-- Populated via JS -->
+            </div>
+            <button class="btn-secondary" style="margin-top: 12px;" onclick="clearCurrentSession()">
+              Clear This User's Private Session
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Feedback / Correction Modal -->
+    <div id="correctionModal" class="modal-backdrop">
+      <div class="modal-box">
+        <div class="modal-header">
+          <h3>Submit Field Correction / Human Ground Truth</h3>
+          <button class="close-btn" onclick="closeCorrectionModal()">&times;</button>
+        </div>
+        <form id="correctionForm" onsubmit="handleCorrectionSubmit(event)">
+          <div class="form-group">
+            <label for="corrScope">Correction Scope:</label>
+            <select id="corrScope" onchange="toggleScopeInputs()">
+              <option value="WELL_INSTANCE">Single Well (e.g. WELL-0045)</option>
+              <option value="WELL_TYPE">Entire Well Type (e.g. All Type B ESP Wells)</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="targetIdGroup">
+            <label for="corrTargetId">Well ID:</label>
+            <input type="text" id="corrTargetId" placeholder="e.g. WELL-0045" value="WELL-0045">
+          </div>
+
+          <div class="form-group" id="targetTypeGroup" style="display: none;">
+            <label for="corrTargetType">Well Type:</label>
+            <select id="corrTargetType">
+              <option value="Type A">Type A (Beam Pumping Unit)</option>
+              <option value="Type B">Type B (Electric Submersible Pump)</option>
+              <option value="Type C">Type C (Gas Lift)</option>
+              <option value="Type D">Type D (Progressive Cavity Pump)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="corrField">Target Parameter / Field:</label>
+            <select id="corrField">
+              <option value="spill_volume_bbl">Spill Volume (bbl) - e.g. mud puddle correction</option>
+              <option value="wellhead_temp_f">Wellhead Temperature (°F)</option>
+              <option value="delta_threshold_f">Production Delta Threshold (°F)</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="corrOriginalVal">Original Value:</label>
+              <input type="text" id="corrOriginalVal" placeholder="6.4" value="6.4">
+            </div>
+            <div class="form-group col">
+              <label for="corrNewVal">Ground Truth Value:</label>
+              <input type="text" id="corrNewVal" placeholder="0.0" value="0.0" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="corrReason">Verification Reason & Soil/Bench Notes:</label>
+            <textarea id="corrReason" rows="2" placeholder="e.g. Physical walk-through confirmed dark patch was non-hydrocarbon mud puddle. Soil test negative." required>Physical walk-through confirmed dark patch was non-hydrocarbon mud puddle. Soil test negative.</textarea>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn-secondary" onclick="closeCorrectionModal()">Cancel</button>
+            <button type="submit" class="btn-primary">Apply Ground Truth Correction</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Client Application Scripts -->
+  <script src="js/visual_renderer.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

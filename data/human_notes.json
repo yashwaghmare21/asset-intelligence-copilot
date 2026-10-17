@@ -1,0 +1,78 @@
+[
+  {
+    "note_id": "NOTE-0001",
+    "well_id": "WELL-0007",
+    "author": "Alice Chen (Senior Operator)",
+    "date": "2024-05-28",
+    "note_type": "Planned Shutdown",
+    "scope": "WELL_INSTANCE",
+    "content": "WELL-0007 is scheduled for planned surface valve replacement and reservoir pressure test starting June 1 through mid-July 2024. All thermal low-readings during this window are planned shut-in, not unexpected equipment failure.",
+    "tags": [
+      "planned_maintenance",
+      "shut_in",
+      "summer_2024"
+    ]
+  },
+  {
+    "note_id": "NOTE-0002",
+    "well_id": "WELL-0045",
+    "author": "Bob Martinez (Field Operator)",
+    "date": "2024-06-11",
+    "note_type": "Field Correction",
+    "scope": "WELL_INSTANCE",
+    "target_inspection_id": "INSP-035624",
+    "target_field": "spill_volume_bbl",
+    "original_value": 6.4,
+    "corrected_value": 0,
+    "reason": "Physical walk-through on June 11 confirmed dark patch was muddy rainwater puddle from thunderstorm, not oil. Containment soil samples 100% negative for crude.",
+    "content": "Correction: The 6.4 bbl drone report on WELL-0045 was a mud puddle. Ground truth oil volume is 0.0 bbl.",
+    "tags": [
+      "correction",
+      "spill_override",
+      "ground_truth"
+    ]
+  },
+  {
+    "note_id": "NOTE-0003",
+    "well_id": "WELL-0088",
+    "author": "Alice Chen (Senior Operator)",
+    "date": "2024-08-15",
+    "note_type": "Operator Observation",
+    "scope": "WELL_INSTANCE",
+    "content": "Alice notes: WELL-0088 seemed to be humming normally and producing fine during my drive-by visual on Aug 12.",
+    "tags": [
+      "conflict_observation"
+    ]
+  },
+  {
+    "note_id": "NOTE-0004",
+    "well_id": "WELL-0088",
+    "author": "Bob Martinez (Field Operator)",
+    "date": "2024-08-16",
+    "note_type": "Dispute / Disagreement",
+    "scope": "WELL_INSTANCE",
+    "content": "Bob disagrees with Alice: WELL-0088 tripped its breaker on Aug 3 and was silent. The drive-by hum was likely neighboring pumpjack WELL-0089.",
+    "tags": [
+      "conflict_disagreement",
+      "contradiction"
+    ]
+  },
+  {
+    "note_id": "NOTE-0005",
+    "well_id": "ALL_TYPE_B",
+    "author": "David Kim (Production Engineer)",
+    "date": "2024-01-10",
+    "note_type": "Technical Calibration",
+    "scope": "WELL_TYPE",
+    "target_type": "Type B",
+    "target_field": "delta_threshold_f",
+    "original_value": 18,
+    "corrected_value": 18,
+    "reason": "Re-verified in winter bench tests that 18.0 deg F is optimal delta threshold across all Type B ESP installations.",
+    "content": "All Type B ESP wells must strictly maintain 18.0 deg F delta above air temperature to be considered producing.",
+    "tags": [
+      "well_type_rule",
+      "sop_calibration"
+    ]
+  }
+]

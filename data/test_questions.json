@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "question": "Which wells in North Field were down the longest this summer (June to August 2024), and why?",
+    "category": "Aggregation & Cause Analysis",
+    "expected_visual": "bar_chart",
+    "expected_focus": "WELL-0012 downtime calculation (weekly inspection 7-day rule), citing repair logs and motor burnout."
+  },
+  {
+    "id": 2,
+    "question": "Is WELL-0007 currently producing oil or is it shut in? Show me its temperature trends.",
+    "category": "Status & Time Series",
+    "expected_visual": "line_chart",
+    "expected_focus": "Wellhead temp vs air temp, delta threshold comparison, and citing Alice Chen's planned maintenance note."
+  },
+  {
+    "id": 3,
+    "question": "Did we have any reportable spills over 5 barrels this year, and were any reported late to the regulator?",
+    "category": "Environmental Compliance",
+    "expected_visual": "table",
+    "expected_focus": "5.0 bbl / 24-hr rule in SOP-SPILL-ENV, cite WELL-0023 fine vs WELL-0045 puddle correction."
+  },
+  {
+    "id": 4,
+    "question": "Show the geographical distribution of all wells in South Basin colored by their operating status.",
+    "category": "Geospatial",
+    "expected_visual": "map",
+    "expected_focus": "Interactive map with pins for South Basin wells, color-coded by active vs stopped."
+  },
+  {
+    "id": 5,
+    "question": "Compare total downtime across all four areas by month for 2024 as a heatmap.",
+    "category": "Multi-dimensional Heatmap",
+    "expected_visual": "heatmap",
+    "expected_focus": "Area x Month 2D intensity grid showing where cumulative downtime concentrated."
+  },
+  {
+    "id": 6,
+    "question": "What is the rule for determining if a Type B well is producing oil? Cite the manual.",
+    "category": "SOP & Document Grounding",
+    "expected_visual": "status_card",
+    "expected_focus": "Cites SOP-ENG-TYPE-B-REV3, explaining ΔT >= 18.0°F rule."
+  },
+  {
+    "id": 7,
+    "question": "Show me a comparison of repair costs across maintenance teams in 2024 as a bar chart.",
+    "category": "Cost & Team Comparison",
+    "expected_visual": "bar_chart",
+    "expected_focus": "Aggregated repair costs grouped by team (Alpha, Bravo, Charlie, Delta)."
+  },
+  {
+    "id": 8,
+    "question": "What happened with the spill on WELL-0045 on June 10, 2024?",
+    "category": "Ground Truth Correction",
+    "expected_visual": "status_card",
+    "expected_focus": "Initial drone report was 6.4 bbl, superseded by Bob Martinez ground check (0 bbl puddle). Regulator inspection closed with 0 fine."
+  },
+  {
+    "id": 9,
+    "question": "Is there any contradiction or conflict regarding WELL-0088's status in August 2024?",
+    "category": "Conflict Detection & Honesty",
+    "expected_visual": "status_card",
+    "expected_focus": "Flags conflict: Alice reported normal operation, but Bob reported breaker trip, and sensor data shows wellhead at ambient air temp."
+  },
+  {
+    "id": 10,
+    "question": "List all wells with more than 35 days of downtime in 2024 as a table.",
+    "category": "Tabular Ranking",
+    "expected_visual": "table",
+    "expected_focus": "Downtime calculated strictly as 7 days per stopped inspection, sorted descending."
+  },
+  {
+    "id": 11,
+    "question": "What were the total regulatory fines paid in 2024 across the entire field?",
+    "category": "Regulatory Aggregation",
+    "expected_visual": "status_card",
+    "expected_focus": "Identifies $25,000 fine on WELL-0023 for late spill report, citing regulatory notice."
+  },
+  {
+    "id": 12,
+    "question": "Explain why repair duration hours differ from official downtime days.",
+    "category": "Domain Rule Clarification",
+    "expected_visual": "status_card",
+    "expected_focus": "Cites SOP-OPS-MAINT-REV2: Weekly inspections govern downtime (7 days/inspection), repair hours measure work duration."
+  },
+  {
+    "id": 13,
+    "question": "Show a status card for WELL-0012 with its latest inspection and active issues.",
+    "category": "Single Entity Status",
+    "expected_visual": "status_card",
+    "expected_focus": "Comprehensive status card with equipment, wellhead temp, ambient temp, delta T, and repair history."
+  },
+  {
+    "id": 14,
+    "question": "Show me all repairs performed by technician Frank Miller in 2024.",
+    "category": "Filtered List",
+    "expected_visual": "table",
+    "expected_focus": "Table of Frank Miller work orders, costs, and issue descriptions."
+  },
+  {
+    "id": 15,
+    "question": "How many total inspections were conducted in 2024, and how many were missed?",
+    "category": "Operational Audit",
+    "expected_visual": "status_card",
+    "expected_focus": "Counts total inspections vs expected (200 wells x 52 weeks = 10,400) and notes missed inspections add 0 downtime."
+  },
+  {
+    "id": 16,
+    "question": "Show the temperature profile of WELL-0033 over the last 6 months as a line chart.",
+    "category": "Time Series Visualization",
+    "expected_visual": "line_chart",
+    "expected_focus": "Line chart showing wellhead temp, air temp, and threshold boundary line."
+  },
+  {
+    "id": 17,
+    "question": "Which well type had the highest average downtime per well in 2024?",
+    "category": "Comparative Analysis",
+    "expected_visual": "bar_chart",
+    "expected_focus": "Average downtime days broken down by Type A, B, C, D."
+  },
+  {
+    "id": 18,
+    "question": "Recall the wells we discussed earlier in our conversation.",
+    "category": "Private User Memory",
+    "expected_visual": "table",
+    "expected_focus": "Recalls only the wells discussed in the current active user's session, isolated from other users."
+  }
+]

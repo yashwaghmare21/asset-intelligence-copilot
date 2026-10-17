@@ -1,0 +1,32 @@
+[
+  {
+    "user_id": "user_alice",
+    "name": "Alice Chen",
+    "role": "Senior Field Operator",
+    "area": "West Valley & North Field"
+  },
+  {
+    "user_id": "user_bob",
+    "name": "Bob Martinez",
+    "role": "Field Operator & Drone Pilot",
+    "area": "South Basin"
+  },
+  {
+    "user_id": "user_carol",
+    "name": "Carol Danvers",
+    "role": "Compliance & Regulatory Officer",
+    "area": "Field-Wide"
+  },
+  {
+    "user_id": "user_david",
+    "name": "David Kim",
+    "role": "Chief Production Engineer",
+    "area": "Field-Wide"
+  },
+  {
+    "user_id": "user_frank",
+    "name": "Frank Miller",
+    "role": "Lead Maintenance Technician",
+    "area": "East Ridge & South Basin"
+  }
+]

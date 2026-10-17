@@ -1,0 +1,15 @@
+[
+  {
+    "override_id": "OVR-0001",
+    "scope": "WELL_INSTANCE",
+    "target_id": "WELL-0045",
+    "target_inspection_id": "INSP-035624",
+    "target_date": "2024-06-10",
+    "field": "spill_volume_bbl",
+    "original_value": 6.4,
+    "corrected_value": 0,
+    "author": "Bob Martinez (Field Operator)",
+    "reason": "Ground truth verification confirmed dark patch was non-hydrocarbon rainwater puddle. Soil samples negative.",
+    "timestamp": "2024-06-11T14:30:00Z"
+  }
+]

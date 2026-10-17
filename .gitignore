@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# System & OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & Temporary Files
+logs/
+*.log
+scratch/
+tmp/
+temp/
+
+# IDE / Editor Configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Build & Test Artifacts
+coverage/
+.nyc_output/

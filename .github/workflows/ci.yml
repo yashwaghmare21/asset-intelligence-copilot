@@ -1,0 +1,30 @@
+name: Asset Intelligence Copilot CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test-and-verify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js Environment
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: 'npm'
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Verify Dataset Generation
+      run: npm run generate-data
+
+    - name: Execute 18 Hackathon Benchmark Evaluations
+      run: npm run test-benchmark
